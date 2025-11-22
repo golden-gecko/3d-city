@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E2158FF8-1A09-4EE1-B515-D599DCF42EB8}</ProjectGuid>
+    <RootNamespace>My3dcity</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-Zm130 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\..\dependencies\OgreSDK\include\;..\..\..\dependencies\wxWidgets\components\wxaui-0.9.2\include;..\..\..\dependencies\wxWidgets\components\wxPropertyGrid\propgrid\include;..\..\..\dependencies\wxWidgets\include;..\..\..\dependencies\wxWidgets\lib\vc_lib\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Dependencies.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;winmm.lib;OgreMain_d.lib;wxbase28d.lib;wxbase28d_net.lib;wxbase28d_odbc.lib;wxbase28d_xml.lib;wxexpat.lib;wxjpeg.lib;wxmsw28d_adv.lib;wxmsw28d_aui.lib;wxmsw28d_core.lib;wxmsw28d_dbgrid.lib;wxmsw28d_gl.lib;wxmsw28d_richtext.lib;wxmsw28d_html.lib;wxcode_msw28d_propgrid.lib;wxpngd.lib;wxzlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(IntDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\dependencies\OgreSDK\lib;..\..\..\dependencies\wxWidgets\components\wxaui-0.9.2\lib;..\..\..\dependencies\wxWidgets\components\wxPropertyGrid\propgrid\lib\vc_lib;..\..\..\dependencies\wxWidgets\lib\vc_lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "..\..\..\bin\system_d\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-Zm116 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\..\..\dependencies\OgreSDK\include\;..\..\..\dependencies\wxWidgets\components\wxaui-0.9.2\include;..\..\..\dependencies\wxWidgets\components\wxPropertyGrid\propgrid\include;..\..\..\dependencies\wxWidgets\include;..\..\..\dependencies\wxWidgets\lib\vc_lib\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Dependencies.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;winmm.lib;OgreMain.lib;wxbase28.lib;wxbase28_net.lib;wxbase28_odbc.lib;wxbase28_xml.lib;wxexpat.lib;wxjpeg.lib;wxmsw28_adv.lib;wxmsw28_aui.lib;wxmsw28_core.lib;wxmsw28_dbgrid.lib;wxmsw28_gl.lib;wxmsw28_richtext.lib;wxmsw28_html.lib;wxcode_msw28_propgrid.lib;wxpng.lib;wxzlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(IntDir)$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\dependencies\OgreSDK\lib;..\..\..\dependencies\wxWidgets\components\wxaui-0.9.2\lib;..\..\..\dependencies\wxWidgets\components\wxPropertyGrid\propgrid\lib\vc_lib;..\..\..\dependencies\wxWidgets\lib\vc_lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "..\..\..\bin\system\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\BuildingView.cpp" />
+    <ClCompile Include="..\src\JunctionView.cpp" />
+    <ClCompile Include="..\src\MapView.cpp" />
+    <ClCompile Include="..\src\PlantView.cpp" />
+    <ClCompile Include="..\src\RouteView.cpp" />
+    <ClCompile Include="..\src\ShapeView.cpp" />
+    <ClCompile Include="..\src\WaterObjectView.cpp" />
+    <ClCompile Include="..\src\Dependencies.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\Explorer.cpp" />
+    <ClCompile Include="..\src\GUI.cpp" />
+    <ClCompile Include="..\src\Info.cpp" />
+    <ClCompile Include="..\src\Library.cpp" />
+    <ClCompile Include="..\src\Log.cpp" />
+    <ClCompile Include="..\src\Main.cpp" />
+    <ClCompile Include="..\src\Notebook.cpp" />
+    <ClCompile Include="..\src\Properties.cpp" />
+    <ClCompile Include="..\src\Render.cpp" />
+    <ClCompile Include="..\src\Tools.cpp" />
+    <ClCompile Include="..\src\ConnectDialog.cpp" />
+    <ClCompile Include="..\src\CreateMapDialog.cpp" />
+    <ClCompile Include="..\src\OpenMapDialog.cpp" />
+    <ClCompile Include="..\src\RouteSearchDialog.cpp" />
+    <ClCompile Include="..\src\SearchDialog.cpp" />
+    <ClCompile Include="..\src\Menu.cpp" />
+    <ClCompile Include="..\src\City.cpp" />
+    <ClCompile Include="..\src\Junction.cpp" />
+    <ClCompile Include="..\src\Graphics.cpp" />
+    <ClCompile Include="..\src\Plugin.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Use</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Use</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\BuildingView.h" />
+    <ClInclude Include="..\src\JunctionView.h" />
+    <ClInclude Include="..\src\MapView.h" />
+    <ClInclude Include="..\src\ObjectView.h" />
+    <ClInclude Include="..\src\PlantView.h" />
+    <ClInclude Include="..\src\RouteView.h" />
+    <ClInclude Include="..\src\ShapeView.h" />
+    <ClInclude Include="..\src\View.h" />
+    <ClInclude Include="..\src\WaterObjectView.h" />
+    <ClInclude Include="..\src\Explorer.h" />
+    <ClInclude Include="..\src\GUI.h" />
+    <ClInclude Include="..\src\Info.h" />
+    <ClInclude Include="..\src\Library.h" />
+    <ClInclude Include="..\src\Log.h" />
+    <ClInclude Include="..\src\Main.h" />
+    <ClInclude Include="..\src\Notebook.h" />
+    <ClInclude Include="..\src\Properties.h" />
+    <ClInclude Include="..\src\Render.h" />
+    <ClInclude Include="..\src\Tools.h" />
+    <ClInclude Include="..\src\TreeItemData.h" />
+    <ClInclude Include="..\src\ConnectDialog.h" />
+    <ClInclude Include="..\src\CreateMapDialog.h" />
+    <ClInclude Include="..\src\OpenMapDialog.h" />
+    <ClInclude Include="..\src\RouteSearchDialog.h" />
+    <ClInclude Include="..\src\SearchDialog.h" />
+    <ClInclude Include="..\src\Menu.h" />
+    <ClInclude Include="..\src\City.h" />
+    <ClInclude Include="..\src\Building.h" />
+    <ClInclude Include="..\src\Connection.h" />
+    <ClInclude Include="..\src\Convert.h" />
+    <ClInclude Include="..\src\Coordinates.h" />
+    <ClInclude Include="..\src\Database.h" />
+    <ClInclude Include="..\src\Junction.h" />
+    <ClInclude Include="..\src\Map.h" />
+    <ClInclude Include="..\src\Object.h" />
+    <ClInclude Include="..\src\Plant.h" />
+    <ClInclude Include="..\src\Route.h" />
+    <ClInclude Include="..\src\Shape.h" />
+    <ClInclude Include="..\src\Street.h" />
+    <ClInclude Include="..\src\WaterObject.h" />
+    <ClInclude Include="..\src\Debug.h" />
+    <ClInclude Include="..\src\Dependencies.h" />
+    <ClInclude Include="..\src\Exception.h" />
+    <ClInclude Include="..\src\Graphics.h" />
+    <ClInclude Include="..\src\Identity.h" />
+    <ClInclude Include="..\src\Plugin.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

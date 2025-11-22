@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="View">
+      <UniqueIdentifier>{b3d6edd1-f815-4bba-93f1-46c703f6547c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{802c2821-ccb2-4c4e-9fc3-8feb9ede0782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Dialogs">
+      <UniqueIdentifier>{25e572a6-9dbe-41ff-afa3-3224ca4e518d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Menus">
+      <UniqueIdentifier>{836ed5bf-b540-4edf-898d-c380852efecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{157e5913-bf32-40aa-b321-eb433a20e503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{cd61c8ab-92c7-45e4-a559-1fe4558e289c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\BuildingView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\JunctionView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MapView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\PlantView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RouteView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ShapeView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\WaterObjectView.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Dependencies.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Explorer.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GUI.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Info.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Library.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Log.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Main.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Notebook.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Properties.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Render.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Tools.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ConnectDialog.cpp">
+      <Filter>GUI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CreateMapDialog.cpp">
+      <Filter>GUI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OpenMapDialog.cpp">
+      <Filter>GUI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RouteSearchDialog.cpp">
+      <Filter>GUI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SearchDialog.cpp">
+      <Filter>GUI\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Menu.cpp">
+      <Filter>GUI\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\City.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Junction.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Graphics.cpp" />
+    <ClCompile Include="..\src\Plugin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\BuildingView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\JunctionView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MapView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ObjectView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PlantView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\RouteView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ShapeView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\View.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WaterObjectView.h">
+      <Filter>View</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Explorer.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GUI.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Info.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Library.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Log.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Main.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Notebook.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Properties.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Render.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Tools.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\TreeItemData.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ConnectDialog.h">
+      <Filter>GUI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CreateMapDialog.h">
+      <Filter>GUI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OpenMapDialog.h">
+      <Filter>GUI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\RouteSearchDialog.h">
+      <Filter>GUI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SearchDialog.h">
+      <Filter>GUI\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Menu.h">
+      <Filter>GUI\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\City.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Building.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Connection.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Convert.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Coordinates.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Database.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Junction.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Map.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Object.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Plant.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Route.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Shape.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Street.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\WaterObject.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Debug.h" />
+    <ClInclude Include="..\src\Dependencies.h" />
+    <ClInclude Include="..\src\Exception.h" />
+    <ClInclude Include="..\src\Graphics.h" />
+    <ClInclude Include="..\src\Identity.h" />
+    <ClInclude Include="..\src\Plugin.h" />
+  </ItemGroup>
+</Project>

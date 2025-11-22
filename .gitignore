@@ -1,3 +1,8 @@
-/bin/cache/*
-/dependencies/OgreSDK/*
-/dependencies/wxWidgets/*
+bin/system/Ogre.cfg
+bin/system/Ogre.log
+dependencies/*
+*.opensdf
+*.sdf
+*.user
+Debug
+Release
