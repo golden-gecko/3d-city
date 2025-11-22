@@ -1,0 +1,18 @@
+material junction
+{
+	technique
+	{
+		pass
+		{
+			cull_software none
+			cull_hardware none
+		
+			texture_unit
+			{
+				texture AsphaltFree.JPG
+				filtering anisotropic
+				scale 5 5
+			}
+		}
+	}
+}

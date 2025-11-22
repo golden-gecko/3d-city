@@ -1,0 +1,19 @@
+material route
+{
+	technique
+	{
+		pass
+		{
+			cull_software none
+			cull_hardware none
+
+			texture_unit
+			{
+				texture Roads0018_S.png
+				tex_address_mode wrap
+				filtering anisotropic
+				scale 2 1
+			}
+		}
+	}
+}

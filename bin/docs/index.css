@@ -1,0 +1,11 @@
+body { margin: 0 auto; width: 800px; }
+
+h1, h2, h3 { color: #336699; }
+
+hr { color: #336699; }
+
+p.upLink { text-align: right; }
+
+div.logo { text-align: center; }
+
+a:hover { text-decoration: none; }

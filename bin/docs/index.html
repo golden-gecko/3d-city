@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html><head>
+
+	<title>3d-city</title>
+
+	<meta  http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" href="index.css" type="text/css" />
+
+</head><body>
+
+	<div class="logo"><a name="top"><img src="3d-city.png" alt="3d-city" /></a></div>
+
+	<ul><li><a href="#about">Aplikacja 3d-city</a></li>
+	<li><a href="#instalation">Instalacja i uruchomienie</a></li>
+	<li><a href="#gui">Interfejs</a></li>
+	<li><a href="#connect">Nawiązywanie połączenia z bazą danych</a></li>
+	<li><a href="#open">Otwieranie mapy</a></li>
+	<li><a href="#create">Tworzenie nowej mapy</a></li>
+	<li><a href="#edit">Edycja mapy</a></li>
+	<li><a href="#show">Tworzenie prezentacji</a></li>
+	<li><a href="#problems">Rozwiązywanie problemów</a></li>
+	<li><a href="#contact">Zgłaszanie błędów</a></li>
+	<li><a href="#dev">W kolejnej wersji</a></li></ul>
+
+	<hr />
+
+	<h2><a name="about">Aplikacja 3d-city</a></h2>
+	<p>Aplikacja służy do tworzenie oraz edycji trójwymiarowych map (głównie planów miast). Dzięki systemowi wtyczek aplikacja jest niezależna od bazy danych i umożliwia pobieranie informacji z różnych źródeł m.in. baz relacyjnych, obiektowych, plików tekstowych oraz binarnych.</p>
+
+	<p class="upLink"><a href="#top">Powrót</a></p>
+
+	<hr />
+
+	<h2><a name="instalation">Instalacja i uruchomienie</a></h2>
+	<p>Aby uruchomić aplikację należy rozpakować pobrane archiwum (np. do folderu "C:\Program Files\3d-city"), a następnie kliknąć dwukrotnie na plik 3d-city.exe znajdujący się w katalogu "C:\Program Files\3d-city\bin".</p>
+	<p>Aplikacja wymaga do poprawnego działa <a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=32BC1BEE-A3F9-4C13-9C99-220B62A191EE">Microsoft Visual C++ 2005 Redistributable Package (x86)</a> oraz DirectX 9.0c.</p>
+
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h2><a name="gui">Interfejs</a></h2>
+
+	<img src="gui.png" alt="Interfejs" />
+
+	<p>Główną cześć interfejsu zajmuje okno, w którym wyświetla jest mapa. Na dole widoczny jest panel wyświetlający informacje o stanie aplikacji lub aktualnie wykonywanych czynnościach. Na górze znajduje się pasek z najczęściej używanymi narzędziami. Wielokropek oznacza, że po wybraniu danego narzędzia pojawi się okno dialogowe. Kolejne narzędzia (od lewej strony):</p>
+
+	<ul><li>"Połącz z bazą danych..."</li>
+	<li>"Odłacz od zaznaczonej bazy"</li>
+	<li>"Otwórz mapę..."</li>
+	<li>"Zapisz mapę"</li>
+	<li>"Zamknij zaznaczoną mapę"</li>
+	<li>"Kursor (wyłącz aktywne narzędzie)"</li>
+	<li>"Zaznacz obiekt"</li>
+	<li>"Przesuń zaznaczony obiekt"</li>
+	<li>"Pełny ekran"</li>
+	<li>"Uruchom pomoc"</li></ul>
+
+	<p>Po prawej stronie znajduje się panel z narzędziami:</p>
+
+	<ul><li>"Info" - wyświetla informacje o zaznaczonej mapie lub obiekcie.</li>
+	<li>"Explorer" - umożliwia pogląd struktury bazy.</li>
+	<li>"Properties" - pozwala na edycję własności zaznaczonego obiektu lub mapy.</li>
+	<li>"Tools" - zawiera narzędzia umożliwiające edycję mapy.</li></ul>
+
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h3><a name="connect">Nawiązywanie połączenia z bazą danych</a></h3>
+
+	<p>Aby połączyć się bazą (źródłem) danych należy:</p>
+	<ol><li>Z menu "Database" wybrać opcję "Connect...". Pojawi się okno dialogowe "Connect to database".</li>
+	<li>Wpisać nazwę, pod którą bazą będzie dostępna w programie (np. "Demo Database").</li>
+	<li>Z listy rozwijalnej wybrać rodzaj połączenia (np. Binary).</li>
+	<li>Uzupełnić dane wymagane do nawiązania połączenia lub otwarcia pliku. Dane zależą od rodzaju wybranego połączenia (np. ścieżka do pliku w przypadku plików binarnych lub odpowiedni <a href="http://www.connectionstrings.com/">connection string</a> w przypadku "ODBC").</li>
+	<li>Nacisnąć przycisk "OK". Aplikacja rozpocznie nawiązywanie połączenia, w przypadku sukcesu zawartość bazy zostanie skopiowana do pamięci aplikacji. Struktura bazy (list map oraz obiektów) pojawi się w zakładce "Explorer" widocznej po prawej stronie. W przypadku pozostawienia domyślnych wartości aplikacja załaduje mapę z testowej bazy dołączonej do aplikacji.</li></ol>
+
+	<img src="connect.png" alt="Okno dialogowe 'Connect to database'" />
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h3><a name="open">Otwieranie mapy</a></h3>
+
+	<p>Aby otworzyć mapę należy:</p>
+	<ol><li>Z menu "Map" wybrać opcję "Open...". Pojawi się okno dialogowe "Open map".</li>
+	<li>Z listy widocznej po lewej stronie wybrać jedną lub kilka map, które chcemy otworzyć.</li>
+	<li>Wpisać szerokość oraz wysokość mapy lub pozostawić domyślne wartości.</li>
+	<li>Wybrać rodzaje obiektów, które mają zostać załadowane wraz z mapą lub pozostawić domyślne wartości.</li>
+	<li>Nacisnąć przycisk "OK".</li></ol>
+
+	<img src="open.png" alt="Okno dialogowe 'Open map'" />
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h3><a name="create">Tworzenie nowej mapy</a></h3>
+
+	<p>Aby utworzyć nową mapę należy:</p>
+	<ol><li>Z menu "Map" wybrać opcję "Open...". Pojawi się okno dialogowe "Open map".</li>
+	<li>Z listy widocznej po lewej stronie wybrać jedną lub kilka map, które chcemy otworzyć.</li>
+	<li>Wpisać szerokość oraz wysokość mapy lub pozostawić domyślne wartości.</li>
+	<li>Wybrać rodzaje obiektów, które mają zostać załadowane wraz z mapą lub pozostawić domyślne wartości.</li></ol>
+
+	<img src="create.png" alt="Okno dialogowe 'Create new map'" />
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h3><a name="edit">Edycja mapy</a></h3>
+
+	<img src="edit.png" alt="Narzędzia służace do edycji mapy" />
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h3><a name="show">Tworzenie prezentacji</a></h3>
+
+	<img src="show.png" alt="Narzędzia służace do tworzenia prezentacji" />
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h2><a name="problems">Rozwiązywanie problemów</a></h2>
+	<p>W przypadku problemów z działaniem aplikacji zaleca się:</p>
+		<ul><li>zmianę ustawień graficzne na niższe,</li>
+		<li>ponowne zainstalowanie najnowszej wersji sterownika graficznego,</li>
+		<li>ponowne zainstalowanie najnowsze wersji biblioteki DirectX 9 lub usunięcie lini:<br /><pre>Plugin=RenderSystem_Direct3D9</pre> z pliku "Plugins.cfg",</li>
+		<li>całkowite usunięcie i ponowne zainstalowanie aplikacji.</li></ul>
+	<p>W razie dalszych problomów należy skontaktować się z autorem aplikacji.</p>
+
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h2><a name="contact">Zgłaszanie błędów</a></h2>
+	<p>Informacje o błędach, sugestie oraz pytania odnośnie aplikacje proszę nadsylać na adres <a href="mailto:wholisz@wp.pl">e-mail.</a></p>
+
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+	<h2><a name="dev">W kolejnej wersji</a></h2>
+	<p>Kolejne wersje aplikacji będą umożliwiały:</p>
+		<ul><li>tworzenie map o nieograniczonym rozmiarze,</li>
+		<li>definiowanie własnych typów obiektów,</li>
+		<li>tworzenie makr przy pomocy wbudowanego języka skryptowego.</li></ul>
+
+	<p class="upLink"><a href="#top">Powrót</a></p>
+	<hr />
+
+</body></html>
